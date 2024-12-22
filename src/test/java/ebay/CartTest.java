@@ -1,9 +1,6 @@
 package ebay;
 
 import org.coindesk.model.Base;
-import org.coindesk.model.WebPage;
-import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.chrome.ChromeDriver;
 import org.testng.annotations.Test;
 
 
