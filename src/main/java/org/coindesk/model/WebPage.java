@@ -8,21 +8,21 @@ import org.testng.Assert;
 import java.util.Iterator;
 import java.util.Set;
 
-public class Util  {
+public class WebPage {
     WebDriver driver;
     int numberOfItem;
 
-    public Util(WebDriver driver) {
-        this.driver=driver;
-    }
+    public WebPage(WebDriver driver) {
+        this.driver =driver;   }
+
 
     public void searchItem(int i){
         if(i!=0){
-        driver.findElement(By.xpath("//input[@class='gh-tb ui-autocomplete-input']")).sendKeys("book");
-        driver.findElement(By.cssSelector("input.btn.btn-prim.gh-spr")).click();//search
-        WebElement book= driver.findElement(By.xpath("//ul[@class='srp-results srp-list clearfix']/li["+(i+1)+"] //div[@class='s-item__title']"));
-        this.numberOfItem=i;
-        book.click();}else{throw new RuntimeException("add atleast one item");}
+            driver.findElement(By.xpath("//input[@class='gh-tb ui-autocomplete-input']")).sendKeys("book");
+            driver.findElement(By.cssSelector("input.btn.btn-prim.gh-spr")).click();//search
+            WebElement book= driver.findElement(By.xpath("//ul[@class='srp-results srp-list clearfix']/li["+(i+1)+"] //div[@class='s-item__title']"));
+            this.numberOfItem=i;
+            book.click();}else{throw new RuntimeException("add atleast one item");}
     }
 
     public void switchTabs(){
